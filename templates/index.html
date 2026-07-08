@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PlacementAI | Student Placement Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+<!-- ========================= HERO ========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>🎓 PlacementAI</h1>
+
+        <p>
+
+            Predict student placement chances using Machine Learning.
+
+            <br>
+
+            Built using Flask & Scikit-Learn.
+
+        </p>
+
+        <a href="#predict">
+
+            <button class="hero-btn">
+
+                Get Started
+
+            </button>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================== PREDICTION ===================== -->
+
+<section id="predict"
+         class="prediction-section">
+
+    <div class="card">
+
+        <h2>
+
+            Placement Prediction
+
+        </h2>
+
+        <p>
+
+            Enter your academic and technical details.
+
+        </p>
+
+
+
+<form id="predictionForm">
+
+<!-- ================= CGPA ================= -->
+
+<div class="input-group">
+
+<label>
+
+CGPA
+
+</label>
+
+<input
+
+type="number"
+
+step="0.01"
+
+id="cgpa"
+
+name="cgpa"
+
+placeholder="Enter CGPA"
+
+required>
+
+</div>
+
+
+
+<!-- ================= IQ ================= -->
+
+<div class="input-group">
+
+<label>
+
+IQ
+
+</label>
+
+<input
+
+type="number"
+
+id="iq"
+
+name="iq"
+
+placeholder="Enter IQ"
+
+required>
+
+</div>
+
+
+
+<!-- ================= Internship ================= -->
+
+<div class="input-group">
+
+<label>
+
+Internship
+
+</label>
+
+<select
+
+id="internship"
+
+name="internship"
+
+required>
+
+<option value="">
+
+Select Internship Status
+
+</option>
+
+<option value="1">
+
+Yes
+
+</option>
+
+<option value="0">
+
+No
+
+</option>
+
+</select>
+
+</div>
+
+
+
+<!-- ================= Projects ================= -->
+
+<div class="input-group">
+
+<label>
+
+Projects
+
+</label>
+
+<input
+
+type="number"
+
+id="projects"
+
+name="projects"
+
+placeholder="Number of Projects"
+
+required>
+
+</div>
+
+
+
+<!-- ================= DSA Rating ================= -->
+
+<div class="input-group">
+
+<label>
+
+DSA Rating
+
+</label>
+
+<input
+
+type="number"
+
+id="dsa_rating"
+
+name="dsa_rating"
+
+placeholder="Enter DSA Rating"
+
+required>
+
+</div>
+
+
+
+<button
+
+type="submit"
+
+class="predict-btn">
+
+Predict Placement
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= RESULT ================= -->
+
+<section class="result-section">
+
+<div class="result-card">
+
+<h2>
+
+Prediction Result
+
+</h2>
+
+<div id="result">
+
+<p>
+
+Your prediction will appear here.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= MODEL INFO ================= -->
+
+<section class="info-section">
+
+    <div class="info-card">
+
+        <h2>
+
+            Model Information
+
+        </h2>
+
+        <ul>
+
+            <li>
+
+                <strong>Algorithm :</strong>
+
+                Logistic Regression
+
+            </li>
+
+            <li>
+
+                <strong>Features :</strong>
+
+                CGPA,
+                IQ,
+                Internship,
+                Projects,
+                DSA Rating
+
+            </li>
+
+            <li>
+
+                <strong>Preprocessing :</strong>
+
+                StandardScaler
+
+            </li>
+
+            <li>
+
+                <strong>Dataset :</strong>
+
+                500 Student Records
+
+            </li>
+
+            <li>
+
+                <strong>Library :</strong>
+
+                Scikit-Learn
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section">
+
+    <div class="about-card">
+
+        <h2>
+
+            About Project
+
+        </h2>
+
+        <p>
+
+            PlacementAI is a Machine Learning web application that predicts
+            whether a student is likely to be placed based on multiple academic
+            and technical features.
+
+        </p>
+
+        <p>
+
+            The prediction model uses five important attributes:
+
+        </p>
+
+        <ul style="text-align:left;max-width:500px;margin:auto;line-height:2;">
+
+            <li>CGPA</li>
+
+            <li>IQ</li>
+
+            <li>Internship Experience</li>
+
+            <li>Number of Projects</li>
+
+            <li>DSA Rating</li>
+
+        </ul>
+
+        <br>
+
+        <p>
+
+            The model is trained using Scikit-Learn Logistic Regression with
+            StandardScaler preprocessing and deployed using Flask.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        Made with ❤️ using Flask, HTML, CSS, JavaScript &
+        Scikit-Learn
+
+    </p>
+
+</footer>
+
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
