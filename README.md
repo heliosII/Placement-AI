@@ -29,7 +29,6 @@ The application provides:
 
 ### Landing Page
 
-> Add your first screenshot here
 
 ![Landing Page](images/landing_page.png)
 
@@ -37,7 +36,6 @@ The application provides:
 
 ### Prediction Result
 
-> Add your second screenshot here
 
 ![Prediction Result](images/prediction_result.png)
 
