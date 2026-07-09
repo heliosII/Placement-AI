@@ -36,6 +36,8 @@ The application provides:
 
 ### Prediction Result
 
+> Add your second screenshot here
+
 ![Prediction Result](images/prediction_result.png)
 
 ---
